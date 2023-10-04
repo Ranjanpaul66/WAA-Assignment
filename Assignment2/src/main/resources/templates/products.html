@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+<h2>HTML Table asdad</h2>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    <tr th:each="p:${products}">
+        <td th:text="${p.id}">ID </td>
+        <td th:text="${p.title}">Title </td>
+        <td th:text="${p.price}">Price </td>
+        <td th:text="${p.description}">Description:</td>
+        asdasdas
+    </tr>
+
+
+</table>
+
+</body>
+</html>
+
