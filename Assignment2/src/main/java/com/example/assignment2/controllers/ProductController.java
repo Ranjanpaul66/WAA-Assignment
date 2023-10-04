@@ -22,6 +22,7 @@ public class ProductController {
         Product product2 = Product.builder().id(2).title("HP New Brand Laptop").description("Very New Laptop").price(80).build();
 
         var products = Arrays.asList(product1, product2);
+        model.addAttribute("products",products);
         return "products";
     }
 
