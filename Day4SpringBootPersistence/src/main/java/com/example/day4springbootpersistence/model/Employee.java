@@ -3,19 +3,21 @@ package com.example.day4springbootpersistence.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
-
-
-@Data
-@Entity
-public class Office {
+//@Entity
+public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
-    @OneToMany()
-    private List<Employee2> employee2;
+
+    @ManyToOne
+    @JoinColumn(name = "department_id")
+    private Department department;
 
 }
 

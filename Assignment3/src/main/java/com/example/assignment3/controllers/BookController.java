@@ -30,6 +30,7 @@ public class BookController {
     @GetMapping("/{id}")
     public Book getBook(@PathVariable int id) throws Exception{
         Optional<Book> book = bookList.stream().filter(obj-> obj.getIsvn()==id).findFirst();
+
         if(book.isPresent()) {
             return book.get();
         } else {

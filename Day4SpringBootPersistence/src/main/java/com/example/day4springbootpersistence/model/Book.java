@@ -3,17 +3,17 @@ package com.example.day4springbootpersistence.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.List;
-
 @Data
 //@Entity
-public class Customer {
+public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String name;
-
+    private int id;
+    private String title;
+    private int totalPage;
+    private int noOfCopies;
+    @ManyToOne
+    private Publisher publisher;
 
 
 }

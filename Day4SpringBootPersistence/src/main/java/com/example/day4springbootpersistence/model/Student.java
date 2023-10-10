@@ -5,17 +5,13 @@ import lombok.Data;
 
 import java.util.List;
 
-
-
 @Data
-@Entity
-public class Office {
+//@Entity
+public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String name;
-    @OneToMany()
-    private List<Employee2> employee2;
-
+    @ManyToMany
+    private List<Course> courses;
 }
-

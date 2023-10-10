@@ -7,12 +7,11 @@ import lombok.Data;
 import java.time.LocalDate;
 
 @Data
-@Entity
+//@Entity
 public class Reservation2 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private LocalDate date;
 
     @ManyToOne
