@@ -49,6 +49,14 @@ public class ICustomerService implements CustomerService {
     }
 
     @Override
+    public Customer findUserByLastNameAndFirstName(String firstname, String lastname){
+        System.out.println(firstname);
+        System.out.println(lastname);
+        List<Customer> coustList = customerRepository.findCustomerByFirstNameAndLastName(firstname, lastname);
+        return coustList.size()>0?coustList.get(0):new Customer();
+    }
+
+    @Override
     public void deleteUser(Long customerId) throws Exception {
         Optional<Customer> optionalCustomer = customerRepository.findById(customerId);
         if(optionalCustomer.isPresent()){

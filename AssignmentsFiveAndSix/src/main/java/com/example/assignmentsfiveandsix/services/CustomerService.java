@@ -13,7 +13,7 @@ public interface CustomerService {
 
     List<Customer> findByFirstName(String FirstName);
     List<Customer> findByFirstNameSearch(String FirstName);
-
+    Customer findUserByLastNameAndFirstName(String firstname, String lastname);
     void deleteUser(Long customerId) throws Exception;
 
 }

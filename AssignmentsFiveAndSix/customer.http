@@ -1,0 +1,33 @@
+POST http://localhost:8080/customers
+Content-Type: application/json;
+
+{
+  "firstName": "Mithun2",
+  "lastName": "Test2",
+  "orders": [{
+    "date": "2023-07-30"
+  },{
+    "date": "2023-07-29"
+  },{
+    "date": "2023-07-28   "
+  }]
+}
+
+
+###
+GET http://localhost:8080/customers
+
+
+
+###
+GET http://localhost:8080/customers?firstName=R
+
+###
+GET http://localhost:8080/customers/search?firstName=pa
+
+
+###
+DELETE http://localhost:8080/customers/4
+
+###
+GET http://localhost:8080/customers/withFullName?firstName=Mithun2&lastName=Test2

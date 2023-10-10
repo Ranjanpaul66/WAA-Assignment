@@ -53,5 +53,15 @@ public class CustomerController {
     }
 
 
+    @GetMapping("/withFullName")
+    public Customer allCustomers(@RequestParam(required = true) String firstName, String lastName){
+        System.out.println("first name"+ firstName);
+        if(firstName!=null && firstName !="" && lastName!=null && lastName !=""){
+            return customerService.findUserByLastNameAndFirstName(firstName, lastName);
+        }
+        return null;
+    }
+
+
 
 }
