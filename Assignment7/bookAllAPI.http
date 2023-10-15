@@ -1,0 +1,35 @@
+GET localhost:8080/books
+Authorization: Basic ranjan@miu.edu 123456
+
+###
+POST localhost:8080/books
+Content-Type: application/json
+Authorization: Basic ranjan@miu.edu 123456
+
+{
+  "title": "Book 1 Add"
+}
+
+###
+POST localhost:8080/books
+Content-Type: application/json
+Authorization: Basic admin@miu.edu 123456
+
+{
+  "title": "Book 2 "
+}
+
+
+###
+PUT localhost:8080/books/10
+Content-Type: application/json
+Authorization: Basic admin@miu.edu 123456
+
+{
+  "id": 1,
+  "title": "Updated Book"
+}
+
+### 
+DELETE localhost:8080/books/2
+Authorization: Basic admin@miu.edu 123456
