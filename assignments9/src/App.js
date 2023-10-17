@@ -9,10 +9,12 @@ function App() {
     };
 
     const decreaseCount = () => {
-        setCount(count - 1);
+        if(count>0) {
+            setCount(count - 1);
+        }
     };
   return (
-      <div>
+      <div className={"counter-container"}>
         <h1>Counter App</h1>
         <p>Current Count: {count}</p>
           <button onClick={decreaseCount}>Decrease by 1 -</button>
